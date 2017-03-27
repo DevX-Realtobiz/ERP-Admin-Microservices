@@ -1,7 +1,11 @@
 version: 1.0.{build}
 image: Visual Studio 2017
+
+#restore NuGet packages before running MSBuild
+before_build:
+  - nuget restore
+  
+#package Web Application project for Web Deploy
 build:
-  publish_nuget: true
-  publish_nuget_symbols: true
-  include_nuget_references: true
   verbosity: minimal
+  publish_wap: true
