@@ -9,6 +9,14 @@ services:
     depends_on:
       - sql.data
 
+  contractors.api:
+    image: erpadmin/contractors.api
+    build:
+      context: ./src/Services/Contractors/Contractors.API
+      dockerfile: Dockerfile
+    depends_on:
+      - sql.data
+
   sql.data:
     image: microsoft/mssql-server-linux
 
