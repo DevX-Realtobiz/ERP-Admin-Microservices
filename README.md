@@ -26,6 +26,7 @@ RabbitMQ is a messaging broker - an intermediary for messaging. It gives your ap
  Main steps:  
 
 - Git clone https://github.com/dotnet/eShopOnContainers.git 
+- Run add-firewall-rules-for-sts-auth-thru-docker.ps1 in PowerShell (The script will open ports 5100-5105
 - Open solution eShopOnContainers-ServicesAndWebApps.sln
 - Set the VS startup project to the "docker-compose" project 
 - Hit F5!
