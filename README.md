@@ -19,8 +19,8 @@ RabbitMQ is a messaging broker - an intermediary for messaging. It gives your ap
 
 
   * Share drives in Docker settings (In order to deploy and debug with Visual Studio 2017)
-  * Minimum 4 CPUs
-  * Minimum 3 gb RAM
+  * Minimum 3 CPUs
+  * Minimum 4 gb RAM
   
  # Run all of the cool stuffs
  Main steps:  
