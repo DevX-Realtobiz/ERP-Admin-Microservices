@@ -9,3 +9,23 @@ his service is a identity provider or STS (Security Token Service) currently imp
 
 ## Infrastrucure (RabbitMQ)
 RabbitMQ is a messaging broker - an intermediary for messaging. It gives your applications a common platform to send and receive messages, and your messages a safe place to live until received.
+
+## Software requirements
+
+### Software installation requirements for a Windows dev machine with Visual Studio 2017 and Docker for Windows:
+
+* Docker for Windows with the concrete configuration specified below.
+* Visual Studio 2017 (Latest version) with the workloads specified below.
+
+
+  * Share drives in Docker settings (In order to deploy and debug with Visual Studio 2017)
+  * Minimum 3 CPUs
+  * Minimum 3 gb RAM
+  
+ # Run all of the cool stuffs
+ Main steps:  
+
+- Git clone https://github.com/dotnet/eShopOnContainers.git 
+- Open solution eShopOnContainers-ServicesAndWebApps.sln
+- Set the VS startup project to the "docker-compose" project 
+- Hit F5!
