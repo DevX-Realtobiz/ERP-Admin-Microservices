@@ -18,13 +18,8 @@ namespace Identity.API.Configuration
                 //Each api we want to securice;
                 new Scope
                 {
-                    Name = "orders",
-                    Description = "Orders Service"
-                },
-                new Scope
-                {
-                    Name = "basket",
-                    Description = "Basket Service"
+                    Name = "contractors",
+                    Description = "Contractors Service"
                 }
             };
         }
@@ -38,7 +33,7 @@ namespace Identity.API.Configuration
                 new Client
                 {
                     ClientId = "js",
-                    ClientName = "eShop SPA OpenId Client",
+                    ClientName = "ERPAdmin SPA OpenId Client",
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
                     RedirectUris =           { $"{clientsUrl["Spa"]}/" },
@@ -49,14 +44,13 @@ namespace Identity.API.Configuration
                     {
                         StandardScopes.OpenId.Name,
                         StandardScopes.Profile.Name,
-                        "orders",
-                        "basket"
+                        "contractors"
                     }
                 },
                 new Client
                 {
                     ClientId = "xamarin",
-                    ClientName = "eShop Xamarin OpenId Client",
+                    ClientName = "ERPAdmin Xamarin OpenId Client",
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
                     RedirectUris =           { "http://eshopxamarin/callback.html" },
@@ -67,8 +61,7 @@ namespace Identity.API.Configuration
                     {
                         StandardScopes.OpenId.Name,
                         StandardScopes.Profile.Name,
-                        "orders",
-                        "basket"
+                        "contractors"
                     }
                 },
                 new Client
@@ -99,8 +92,7 @@ namespace Identity.API.Configuration
                         StandardScopes.OpenId.Name,
                         StandardScopes.Profile.Name,
                         StandardScopes.OfflineAccess.Name,
-                        "orders",
-                        "basket",
+                        "contractors"
                     },
                 }
             };
