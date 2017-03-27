@@ -1,4 +1,6 @@
-﻿namespace ERPAdmin.Services.Contractors.API
+﻿using ERPAdmin.Services.Contractors.API.Infrastructure;
+
+namespace ERPAdmin.Services.Contractors.API
 {
     using Microsoft.AspNetCore.Http;
     using Autofac;
@@ -115,7 +117,7 @@
             app.UseSwagger()
                 .UseSwaggerUi();
 
-            //ContractorsContextSeed.SeedAsync(app).Wait();
+            ContractorsContextSeed.SeedAsync(app).Wait();
         }
 
         protected virtual void ConfigureAuth(IApplicationBuilder app)
@@ -124,7 +126,7 @@
             app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions
             {
                 Authority = identityUrl.ToString(),
-                ScopeName = "Contractors",
+                ScopeName = "contractors",
                 RequireHttpsMetadata = false
             });
         }

@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:2999/",
+      "applicationUrl": "http://localhost:5102/",
       "sslPort": 0
     }
   },
@@ -16,14 +16,13 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Contractors.API": {
+    "ERPAdmin.Services.Contractors.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "http://localhost:5000/api/environmentInfo/machinename",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "http://localhost:3000"
+      }
     }
   }
 }

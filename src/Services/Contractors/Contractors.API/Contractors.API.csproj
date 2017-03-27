@@ -8,13 +8,26 @@
     <OutputType>Exe</OutputType>
     <PackageId>Contractors.API</PackageId>
     <UserSecretsId>aspnet-Contractors.API-20161122013547</UserSecretsId>
-    <DockerComposeProjectPath>..\..\..\..\ERPAdmin Github\docker-compose.dcproj</DockerComposeProjectPath>
-    <RootNamespace>ERPAdmin.Services.Contractors.API</RootNamespace>
-    <PackageTargetFallback>portable-net45+win8</PackageTargetFallback>
+    <DockerComposeProjectPath>..\..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
+    <RootNamespace>Contractors.API</RootNamespace>
+    <PackageTargetFallback>$(PackageTargetFallback);netstandard1.6.1;dnxcore50;portable-net451+win8</PackageTargetFallback>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Compile Remove="Infrastructure\Migrations\20170208181933_Initial.cs" />
+    <Compile Remove="Infrastructure\Migrations\20170208181933_Initial.Designer.cs" />
+    <Compile Remove="Infrastructure\Migrations\20170303085729_RequestsTable.cs" />
+    <Compile Remove="Infrastructure\Migrations\20170303085729_RequestsTable.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Update="web.config;">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include=".dockerignore;">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="1.1.0" />
@@ -26,9 +39,9 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="1.1.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="1.1.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.1.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="1.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.0" />
@@ -43,11 +56,15 @@
     <PackageReference Include="System.ValueTuple" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contractors.Domain\Contractors.Domain.csproj" />
     <ProjectReference Include="..\Contractors.Infrastructure\Contractors.Infrastructure.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

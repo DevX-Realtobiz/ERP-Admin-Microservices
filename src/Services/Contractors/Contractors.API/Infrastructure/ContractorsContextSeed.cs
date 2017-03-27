@@ -18,25 +18,25 @@
 
             using (context)
             {
-                context.Database.Migrate();
+                // context.Database.Migrate();
 
-                if (!context.CardTypes.Any())
-                {
-                    context.CardTypes.Add(CardType.Amex);
-                    context.CardTypes.Add(CardType.Visa);
-                    context.CardTypes.Add(CardType.MasterCard);
+                //if (!context.CardTypes.Any())
+                //{
+                //    context.CardTypes.Add(CardType.Amex);
+                //    context.CardTypes.Add(CardType.Visa);
+                //    context.CardTypes.Add(CardType.MasterCard);
 
-                    await context.SaveChangesAsync();
-                }
+                //    await context.SaveChangesAsync();
+                //}
 
-                if (!context.ContractorStatus.Any())
-                {
-                    context.ContractorStatus.Add(ContractorStatus.Canceled);
-                    context.ContractorStatus.Add(ContractorStatus.InProcess);
-                    context.ContractorStatus.Add(ContractorStatus.Shipped);
-                }
+                //if (!context.ContractorStatus.Any())
+                //{
+                //    context.ContractorStatus.Add(ContractorStatus.Canceled);
+                //    context.ContractorStatus.Add(ContractorStatus.InProcess);
+                //    context.ContractorStatus.Add(ContractorStatus.Shipped);
+                //}
 
-                await context.SaveChangesAsync();
+                //await context.SaveChangesAsync();
             }
         }
 

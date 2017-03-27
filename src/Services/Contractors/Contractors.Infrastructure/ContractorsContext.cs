@@ -31,14 +31,14 @@ namespace ERPAdmin.Services.Contractors.Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            modelBuilder.Entity<ClientRequest>(ConfigureRequests);
-            modelBuilder.Entity<Address>(ConfigureAddress);
-            modelBuilder.Entity<PaymentMethod>(ConfigurePayment);
-            modelBuilder.Entity<Contractor>(ConfigureContractor);
-            modelBuilder.Entity<ContractorItem>(ConfigureContractorItems);
-            modelBuilder.Entity<CardType>(ConfigureCardTypes);
-            modelBuilder.Entity<ContractorStatus>(ConfigureContractorStatus);
-            modelBuilder.Entity<Buyer>(ConfigureBuyer);
+            //modelBuilder.Entity<ClientRequest>(ConfigureRequests);
+            //modelBuilder.Entity<Address>(ConfigureAddress);
+            //modelBuilder.Entity<PaymentMethod>(ConfigurePayment);
+            //modelBuilder.Entity<Contractor>(ConfigureContractor);
+            //modelBuilder.Entity<ContractorItem>(ConfigureContractorItems);
+            //modelBuilder.Entity<CardType>(ConfigureCardTypes);
+            //modelBuilder.Entity<ContractorStatus>(ConfigureContractorStatus);
+            //modelBuilder.Entity<Buyer>(ConfigureBuyer);
         }
 
         private void ConfigureRequests(EntityTypeBuilder<ClientRequest> requestConfiguration)
