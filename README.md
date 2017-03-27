@@ -26,7 +26,7 @@ RabbitMQ is a messaging broker - an intermediary for messaging. It gives your ap
  Main steps:  
 
 - Git clone https://github.com/Magik3a/ERP-Admin-Microservices
-- Run add-firewall-rules-for-sts-auth-thru-docker.ps1 in PowerShell (The script will open ports 5100-5105
+- Run add-firewall-rules-for-sts-auth-thru-docker.ps1 in PowerShell (The script will open ports 5100-5105)
 - Open solution ERPAdmin.sln
 - Set the VS startup project to the "docker-compose" project 
 - Hit F5!
